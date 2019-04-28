@@ -7,14 +7,26 @@ public class Validation {
 
 		// 1. Watch the first 2 minutes of this movie: http://vimeo.com/2485018
 		int randomNumber = new Random().nextInt(5);
-		// 2. On paper, write all the numbers that get printed when you run this class
 		System.out.println(randomNumber);
-
-		// 3. Use the randomNumber to give the user a random compliment.
-
-		// 4. Repeat all the code above 10 times
 		
-		// 5. Find someone to test out your program. They will like it :)
+		for (int i = 0; i <= 9; i++) {
+			
+		if (randomNumber == 0) {
+            System.out.println("You have such interesting personality"); 
+	        }
+        else if (randomNumber == 1) {
+            System.out.println("You are awesome"); 
+	        }
+        else if (randomNumber == 2) {
+            System.out.println("You have an amazing face"); 
+	        }
+        else if (randomNumber == 3) {
+            System.out.println("You have powerfull features, has anybody told you that?"); 
+	        }
+        else {
+            System.out.println("You are so intelligent"); 
+	        }
+		}
 	}
 }
 

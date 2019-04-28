@@ -1,12 +1,14 @@
 package exercises;
 
+import javax.swing.JOptionPane;
+
 import voce.SpeechSynthesizer;
 
 /**
  * The first Speak & Spell was introduced at the summer Consumer Electronics
  * Show in June 1978, making it one of the earliest hand-held electronic devices
- * with a visual display to use interchangeable game cartridges. 
- * It was my favorite game as a kid.
+ * with a visual display to use interchangeable game cartridges. It was my
+ * favorite game as a kid.
  * 
  * https://www.youtube.com/watch?v=qM8FcN0aAvU
  **/
@@ -14,18 +16,77 @@ import voce.SpeechSynthesizer;
 public class SpeakAndSpell {
 
 	public static void main(String[] args) {
-		// 1. Use the speak method to say the word. "e.g. spell mandlebrot"
 
-		// 2. Catch the user's answer in a String
+		JOptionPane.showMessageDialog(null, "Write the word you hear!");
+		speak("mandlebrot");
+		String userSpelling = JOptionPane.showInputDialog("Spell it!");
+		int score = 0;
 
-		// 3. If the user spelled the word correctly, speak "correct"
+			if (userSpelling.equals("mandlebrot")) {
+				JOptionPane.showMessageDialog(null, "Correct!");
+				score += 2;
+			} else {
+				JOptionPane.showMessageDialog(null, "Wrong!");
+				score--;
+			}
 
-		// 4. Otherwise say "wrong"
+			speak("concatenate");
+			String userSpelling1 = JOptionPane.showInputDialog("Spell it!");
 
-		// 5. Repeat the process for other words
-		
-		// 6. Calculate the user's score and give it to them at the end of the game 
-		
+			if (userSpelling1.equals("concatenate")) {
+				JOptionPane.showMessageDialog(null, "Correct!");
+				score += 2;
+			} else {
+				JOptionPane.showMessageDialog(null, "Wrong!");
+				score--;
+			}
+
+			speak("handkerchief");
+			String userSpelling2 = JOptionPane.showInputDialog("Spell it!");
+
+			if (userSpelling2.equals("handkerchief")) {
+				JOptionPane.showMessageDialog(null, "Correct!");
+				score += 2;
+			} else {
+				JOptionPane.showMessageDialog(null, "Wrong!");
+				score--;
+			}
+
+			speak("maintenance");
+			String userSpelling3 = JOptionPane.showInputDialog("Spell it!");
+
+			if (userSpelling3.equals("maintenance")) {
+				JOptionPane.showMessageDialog(null, "Correct!");
+				score += 2;
+			} else {
+				JOptionPane.showMessageDialog(null, "Wrong!");
+				score--;
+			}
+
+			speak("deductible");
+			String userSpelling4 = JOptionPane.showInputDialog("Spell it!");
+
+			if (userSpelling4.equals("deductible")) {
+				JOptionPane.showMessageDialog(null, "Correct!");
+				score += 2;
+			} else {
+				JOptionPane.showMessageDialog(null, "Wrong!");
+				score--;
+			}
+
+			speak("pronunciation");
+			String userSpelling5 = JOptionPane.showInputDialog("Spell it!");
+
+			if (userSpelling5.equals("pronunciation")) {
+				JOptionPane.showMessageDialog(null, "Correct!");
+				score += 2;
+			} else {
+				JOptionPane.showMessageDialog(null, "Wrong!");
+				score--;
+			}
+
+			JOptionPane.showMessageDialog(null, "Your score is: " + score);
+			System.exit(0);
 		
 	}
 
